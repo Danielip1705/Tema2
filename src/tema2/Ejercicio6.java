@@ -28,19 +28,16 @@ public class Ejercicio6 {
 		System.out.println("indica que numero quiere que sea c");
 		
 		c = sc.nextDouble();
-		x = (-b + Math.sqrt((b*b)-4*a*c));
+		x = (-b + Math.sqrt((b*b)-4*a*c)/2*a);
 		x1 = (-b - Math.sqrt((b*b)-4*a*c));
 		
-		if (Math.sqrt((b*b)-4*a*c) <0) {
-			
-			System.out.println("no tiene solucion");
+		if (x>0){
+		System.out.println("No hay solución");
 		
-		} else if (x = (-b + Math.sqrt((b*b)-4*a*c));
-		x1 = (-b - Math.sqrt((b*b)-4*a*c));){
-			syso
-		}
-		
-		
+	} else { 
+		System.out.println("el resultado es " +x);
 	}
 
 }
+}
+

@@ -17,14 +17,12 @@ public class Ejercicio1 {
 		//escribimos el num1
 		num1 = sc.nextInt();
 		
-		//le sacamos el resto a num1
-		num1 = num1%2;
 		
 		//declaramos con if que si num1 es = 0 es par, y si no lo es, impar
-		if (num1==0){
-		System.out.println("Es par");
+		if (num1%2 == 0){
+			System.out.println("Es par");
 		}else {
-		System.out.println("Es impar");
+			System.out.println("Es impar");
 			
 		}
 		//cerramos scanner

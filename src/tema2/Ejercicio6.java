@@ -5,37 +5,30 @@ import java.util.Scanner;
 public class Ejercicio6 {
 
 	public static void main(String[] args) {
-		//guardamos con la variable double a,b,c,x,x1
-		double a;
-		double b;
-		double c;
+		int a, b, c;
 		double x;
 		double x1;
-		double resultado1;
-		double resultado2;
-		
-		//creamos scanner
+		long discriminante;
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("indica que numero quiere que sea a");
+		a = sc.nextInt();
+		b = sc.nextInt();
+		c = sc.nextInt();
 		
-		a = sc.nextDouble();
+		discriminante=	(long) (Math.pow(b, 2)) - (4 * a * c);
 		
-		System.out.println("indica que numero quiere que sea b");
-		
-		b = sc.nextDouble();
-		
-		System.out.println("indica que numero quiere que sea c");
-		
-		c = sc.nextDouble();
-		x = (-b + Math.sqrt((b*b)-4*a*c)/2*a);
-		x1 = (-b - Math.sqrt((b*b)-4*a*c));
-		
-		if (x>0){
-		System.out.println("No hay solución");
-		
-	} else { 
-		System.out.println("el resultado es " +x);
+		if (discriminante<0) {
+			System.out.println("La ecuacion no tiene solucion");
+		} else {
+			if (a== 0) {
+				x= (double) -c/b;
+				System.out.println("La ecucacion tiene un única solucion:" + x);
+			} else {
+				x= -b + Math.sqrt(discriminante) /(2*a);
+				x1= -b - Math.sqrt(discriminante) /(2*a);
+					System.out.println("La solución de la ecuacion es" +x + x1);
+			}
+		sc.close();
 	}
 
 }
